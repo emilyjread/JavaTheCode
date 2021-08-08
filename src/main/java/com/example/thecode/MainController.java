@@ -3,7 +3,7 @@ package com.example.thecode;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,8 +33,7 @@ public class MainController {
 	public String code(HttpSession session) {
 		if (session.getAttribute("code")=="true") {
 			return "code.jsp";
-		}
-		
+		}	
 		else {
 			return "redirect:/codeerror";
 		}
